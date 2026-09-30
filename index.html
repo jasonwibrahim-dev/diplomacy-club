@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My SVG Website</title>
+    <title>My SVG Gallery</title>
     <style>
         * {
             margin: 0;
@@ -12,26 +12,55 @@
         }
         body {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             min-height: 100vh;
-            background-color: #ffffff; /* Change to match your background preference */
-            overflow: hidden;
+            background-color: #ffffff; /* Page background color */
+            padding: 40px 20px;        /* Padding at the top, bottom, and sides */
+            font-family: sans-serif;   /* Cleans up the text font */
+        }
+        .container {
+            max-width: 800px;          /* Prevents the SVGs from getting too massive on wide screens */
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;                 /* Adjust this to change the spacing between elements */
         }
         img {
             max-width: 100%;
-            max-height: 100vh;
-            width: auto;
-            height: auto;
-            object-fit: contain;
+            height: auto;              /* Keeps the original aspect ratio */
+            display: block;
+        }
+        p {
+            font-size: 1.2rem;
+            color: #333333;            /* Text color */
+            text-align: center;
+            line-height: 1.5;
+            max-width: 600px;
         }
     </style>
 </head>
 <body>
 
-    <!-- Displays your SVG seamlessly -->
-    <img src="Youngstown Start.svg" alt="Diplomacy Map">
+    <div class="container">
+
+        <!-- First SVG -->
+        <img src="logo1.svg" alt="First Graphic">
+
+        <!-- Text Between -->
+        <p>This is some description text placed nicely between your first and second SVG files.</p>
+
+        <!-- Second SVG -->
+        <img src="logo2.svg" alt="Second Graphic">
+
+        <!-- Text Between -->
+        <p>You can add as many SVGs and text blocks as you want by just copying and pasting these tags.</p>
+
+        <!-- Third SVG -->
+        <img src="logo3.svg" alt="Third Graphic">
+
+    </div>
 
 </body>
 </html>
-U
