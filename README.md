@@ -1,0 +1,1 @@
+The Diplomacy Club is a club that meets weekly at a local high school. This was built by their club president in order to allow for a website showing game states of the board game Diplomacy, more specifically the Youngstown variant.
