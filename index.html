@@ -88,9 +88,7 @@
         }
     </style>
         <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide');
-        const counter = document.getElementById('slideCounter');
+        
 
         function updateCarousel() {
             slides.forEach((slide, index) => {
@@ -98,14 +96,17 @@
             });
             counter.textContent = `Phase ${currentSlide + 1} of ${slides.length}`;
         }
-
+        function initialize(){
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.slide');
+            const counter = document.getElementById('slideCounter');
+            updateCarousel();
+        }
         function changeSlide(direction) {
             currentSlide = (currentSlide + direction) % slides.length;
             updateCarousel();
         }
-
-        // Initialize on load
-        updateCarousel();
+        
     </script>
 </head>
 <body>
@@ -164,7 +165,9 @@
 
     </div>
 
-
+<script>
+    initialize();
+</script>
 
 </body>
 </html>
