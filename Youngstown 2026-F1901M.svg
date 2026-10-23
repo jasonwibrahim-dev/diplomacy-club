@@ -2679,13 +2679,6 @@
                           stroke-width="2.5" marker-end="url(#arrow)"/>
                 </g>
                 <g>
-                    <polygon stroke-width="4.5" class="varwidthshadow"
-                             points="873.5,238.9 884.1,249.5 884.1,264.5 873.5,275.1 858.5,275.1 847.9,264.5 847.9,249.5 858.5,238.9 "/>
-                    <polygon stroke-width="2.5" class="varwidthorder"
-                             points="873.5,238.9 884.1,249.5 884.1,264.5 873.5,275.1 858.5,275.1 847.9,264.5 847.9,249.5 858.5,238.9 "
-                             stroke="saddlebrown"/>
-                </g>
-                <g>
                     <line x1="401" x2="363" y1="259" y2="278.8"
                           class="varwidthshadow" stroke-width="4.5"/>
                     <line x1="401" x2="363" y1="259" y2="278.8"
