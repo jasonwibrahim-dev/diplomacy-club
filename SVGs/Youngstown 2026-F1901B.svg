@@ -4,7 +4,7 @@
      contentStyleType="text/css" height="630" viewBox="0 0 980 630"
      preserveAspectRatio="xMinYMin" xmlns="http://www.w3.org/2000/svg"
      version="1.0">
-
+<!--test-->
     <!-- jdip XML additions -->
     <jdipNS:DISPLAY xmlns:jdipNS="http://jdip.sourceforge.org/jdipNS">
         <jdipNS:ZOOM max="2500" min="5" factor="1.2"/>
