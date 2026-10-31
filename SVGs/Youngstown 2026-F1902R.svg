@@ -633,7 +633,7 @@
             <jdipNS:UNIT x="116" y="232"/>
             <jdipNS:DISLODGED_UNIT x="121" y="237"/>
         </jdipNS:PROVINCE>
-        <jdipNS:PROVINCE name="pie">
+        <jdipNS:PROVINCE name="">
             <jdipNS:UNIT x="170" y="276"/>
             <jdipNS:DISLODGED_UNIT x="175" y="281"/>
         </jdipNS:PROVINCE>
@@ -1458,7 +1458,7 @@
         </g>
         <polygon id="_pic" class="france"
                  points="87,224,100,216,101,211,105,208 116,215,129,218,136,223 129,232,105,231,89,235"/>
-        <polygon id="_pie" class="italy"
+        <polygon id="_pie" class="france"
                  points="177,245,171,250,169,254,166,252,157,254,151,257 149,259,149,269,160,277 168,272,173,264,176,261,177,255,185,252 181,246"/>
         <polygon id="_por" class="france"
                  points="57,347,44,347,43,337,38,327,42,320,43,305 64,305,61,312"/>
