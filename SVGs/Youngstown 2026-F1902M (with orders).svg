@@ -31,7 +31,7 @@
         <jdipNS:SYMBOLSIZE name="DislodgedFleet" width="20" height="20"/>
         <jdipNS:SYMBOLSIZE name="DislodgedArmy" width="20" height="20"/>
         <jdipNS:SYMBOLSIZE name="DislodgedWing" width="20" height="20"/>
-        <jdipNS:SYMBOLSIZE name="FailedOrder" width="20" height="20"/>
+        <jdipNS:SYMBOLSIZE name="Failed" width="20" height="20"/>
         <jdipNS:SYMBOLSIZE name="SupplyCenter" width="10" height="10"/>
         <jdipNS:SYMBOLSIZE name="BuildUnit" width="25" height="25"/>
         <jdipNS:SYMBOLSIZE name="RemoveUnit" width="25" height="25"/>
@@ -43,21 +43,21 @@
         <jdipNS:WAIVE deltaRadius="0"/>
         <jdipNS:HOLD deltaRadius="4" hilightOffset="0" shadowWidths="4.5,6,8,10"
                      widths="2.5,4,6,8" hilightCSSClass="varwidthshadow"
-                     strokeCSSStyle="varwidthorder"/>
+                     strokeCSSStyle="varwidth"/>
         <jdipNS:MOVE deltaRadius="4" hilightOffset="0" markerID="arrow"
                      shadowWidths="4.5,6,8,10" widths="2.5,4,6,8"
                      hilightCSSClass="varwidthshadow"
-                     strokeCSSStyle="varwidthorder"/>
-        <jdipNS:RETREAT strokeCSSStyle="defaultorder" deltaRadius="4"
+                     strokeCSSStyle="varwidth"/>
+        <jdipNS:RETREAT strokeCSSStyle="default" deltaRadius="4"
                         hilightOffset="0" markerID="arrow"
-                        hilightCSSClass="shadoworder"/>
-        <jdipNS:SUPPORT strokeCSSStyle="supportorder" deltaRadius="7"
+                        hilightCSSClass="shadow"/>
+        <jdipNS:SUPPORT strokeCSSStyle="support" deltaRadius="7"
                         hilightOffset="0" markerID="arrow"
                         hilightCSSClass="shadowdash"/>
-        <jdipNS:CONVOY strokeCSSStyle="convoyorder" deltaRadius="7"
+        <jdipNS:CONVOY strokeCSSStyle="convoy" deltaRadius="7"
                        hilightOffset="0" markerID="arrow"
                        hilightCSSClass="shadowdash"/>
-    </jdipNS:ORDERDRAWING>
+    </jdipNS:DRAWING>
 
     <jdipNS:PROVINCE_DATA xmlns:jdipNS="http://jdip.sourceforge.org/jdipNS">
         <jdipNS:PROVINCE name="adr">
@@ -943,7 +943,7 @@
 			.sea         		{fill:#99ccff; stroke:black; stroke-width:1px;}
 			.nopower      		{fill:navajowhite; stroke:black; stroke-width:1px;}
 			.neutral 			{fill:#808080; stroke:black; stroke-width:1px;}
-		  	.unordered 			 {fill:red; stroke:black; stroke-width:1;fill-opacity:0.90;}
+		  	.uned 			 {fill:red; stroke:black; stroke-width:1;fill-opacity:0.90;}
 
 			
 		  /* Power colors */
@@ -996,15 +996,15 @@
 			.label06	{font-family:Arial,sanserif; font-size:6px; text-anchor:middle;}
 			.label04	{font-family:Arial,sanserif; font-size:4px; text-anchor:middle;}
 			
-		  /* Order drawing styles, stroke and fill colors should not be specified */
-			.defaultorder	{stroke-width:3;fill:none;}
-			.supportorder	{stroke-width:3;fill:none;stroke-dasharray:2,1.5;}
-			.convoyorder	{stroke-dasharray:3,1;stroke-width:3;fill:none;}
+		  /*  drawing styles, stroke and fill colors should not be specified */
+			.default	{stroke-width:3;fill:none;}
+			.support	{stroke-width:3;fill:none;stroke-dasharray:2,1.5;}
+			.convoy	{stroke-dasharray:3,1;stroke-width:3;fill:none;}
 			
-			.shadoworder	{stroke-width:5;fill:none;stroke:black;}
+			.shadow	{stroke-width:5;fill:none;stroke:black;}
 			.shadowdash		{stroke-width:5;fill:none;stroke:black;opacity:0.85;}
 			
-			.varwidthorder  {fill:none;}
+			.varwidth  {fill:none;}
 			.varwidthshadow {fill:none;stroke:black;}
 			
 			
@@ -1014,10 +1014,10 @@
 .symRemove {stroke:red;stroke-width:1;fill:none;}
 .symShadow {stroke:black;fill:black;stroke-width:1;opacity:0.40;}
 .symDislodgedShadow {stroke:red;fill:red;stroke-width:1;opacity:0.50;}
-.symThinDislodgedBorder {stroke:red;stroke-width:0.2;}
+.symThinDislodgedB {stroke:red;stroke-width:0.2;}
 .symDarkener {fill:black;opacity:0.45;fill-opacity:0.45;}
 .symCenterHub {fill:black; stroke:black; opacity:0.60; stroke-width:0.5px;}
-.symThinBorder {stroke:black;stroke-width:0.2;}
+.symThinB {stroke:black;stroke-width:0.2;}
 ]]></style>
 
         <marker refX="5" refY="5" markerUnits="strokeWidth" orient="auto"
@@ -1037,7 +1037,7 @@
                     <rect x="-4" width="22" height="3" y="5"/>
                     <circle r="6" cx="10" cy="10"/>
                 </g>
-                <g class="symThinBorder">
+                <g class="symThinB">
                     <rect x="-4" width="22" height="3" y="5"/>
                     <rect x="-4" width="22" height="3" y="5" class="symDarkener"/>
                     <circle r="6" cx="10" cy="10"/>
@@ -1051,7 +1051,7 @@
                 <g class="symShadow" transform="translate(19,11)">
                     <path d="M175,195 c0,-1 0,-2 0,-2 -3,0 -5,0 -8,0 0,-1 0,-2 0,-3 -6,0 -12,0 -18,0 0,-3 0,-7 0,-10 1,0 2,0 3,0 0,-1 0,-2 0,-3 0,0 1,0 1,0 0,-1 0,-3 0,-5 3,0 6,0 9,0 0,-1 0,-2 0,-3 2,0 5,0 8,0 0,-6 0,-12 0,-18 -3,0 -5,0 -7,0 0,-8 0,-15 0,-23 -6,0 -13,0 -20,0 0,-1 0,-2 0,-4 -5,0 -11,0 -16,0 0,-1 0,-3 0,-5 -7,0 -13,0 -19,0 0,-1 0,-2 0,-4 -6,0 -12,0 -18,0 0,-1 0,-3 0,-5 -5,0 -9,0 -14,0 0,-1 0,-2 0,-3 -4,0 -8,0 -12,0 0,-2 0,-4 0,-5 -3,0 -5,0 -8,0 0,-2 0,-3 0,-4 -2,0 -4,0 -6,0 0,-2 0,-4 0,-7 -3,0 -5,0 -8,0 0,-3 0,-7 0,-11 2,0 3,0 5,0 0,-1 0,-2 0,-2 10,0 19,0 29,0 0,-1 0,-2 0,-3 29,0 58,0 87,0 0,-5 0,-10 0,-15 2,0 3,0 4,0 0,-4 0,-8 0,-12 1,0 2,0 3,0 0,-4 0,-8 0,-12 0,0 1,0 2,0 0,-2 0,-4 0,-6 3,0 6,0 9,0 0,2 0,4 0,6 1,0 2,0 4,0 0,4 0,8 0,12 1,0 1,0 2,0 0,4 0,8 0,12 1,0 2,0 3,0 0,5 0,10 0,15 29,0 59,0 88,0 0,1 0,2 0,3 10,0 20,0 29,0 0,0 0,1 0,2 2,0 4,0 5,0 0,4 0,8 0,11 -2,0 -5,0 -7,0 0,3 0,5 0,7 -2,0 -4,0 -7,0 0,1 0,2 0,4 -2,0 -5,0 -7,0 0,1 0,3 0,5 -4,0 -8,0 -13,0 0,1 0,2 0,3 -4,0 -9,0 -14,0 0,2 0,4 0,5 -5,0 -11,0 -17,0 0,2 0,3 0,4 -7,0 -13,0 -19,0 0,2 0,4 0,5 -6,0 -11,0 -17,0 0,2 0,3 0,4 -7,0 -14,0 -21,0 0,8 0,15 0,23 -2,0 -4,0 -5,0 0,6 0,12 0,18 2,0 5,0 7,0 0,1 0,2 0,3 3,0 6,0 9,0 0,2 0,4 0,5 1,0 1,0 2,0 0,1 0,2 0,3 0,0 1,0 2,0 0,3 0,7 0,10 -6,0 -12,0 -18,0 0,1 0,2 0,3 -2,0 -5,0 -7,0 0,0 0,1 0,2 -2,0 -4,0 -5,0z"/>
                 </g>
-                <g class="symThinBorder">
+                <g class="symThinB">
                     <path d="M175,195 c0,-1 0,-2 0,-2 -3,0 -5,0 -8,0 0,-1 0,-2 0,-3 -6,0 -12,0 -18,0 0,-3 0,-7 0,-10 1,0 2,0 3,0 0,-1 0,-2 0,-3 0,0 1,0 1,0 0,-1 0,-3 0,-5 3,0 6,0 9,0 0,-1 0,-2 0,-3 2,0 5,0 8,0 0,-6 0,-12 0,-18 -3,0 -5,0 -7,0 0,-8 0,-15 0,-23 -6,0 -13,0 -20,0 0,-1 0,-2 0,-4 -5,0 -11,0 -16,0 0,-1 0,-3 0,-5 -7,0 -13,0 -19,0 0,-1 0,-2 0,-4 -6,0 -12,0 -18,0 0,-1 0,-3 0,-5 -5,0 -9,0 -14,0 0,-1 0,-2 0,-3 -4,0 -8,0 -12,0 0,-2 0,-4 0,-5 -3,0 -5,0 -8,0 0,-2 0,-3 0,-4 -2,0 -4,0 -6,0 0,-2 0,-4 0,-7 -3,0 -5,0 -8,0 0,-3 0,-7 0,-11 2,0 3,0 5,0 0,-1 0,-2 0,-2 10,0 19,0 29,0 0,-1 0,-2 0,-3 29,0 58,0 87,0 0,-5 0,-10 0,-15 2,0 3,0 4,0 0,-4 0,-8 0,-12 1,0 2,0 3,0 0,-4 0,-8 0,-12 0,0 1,0 2,0 0,-2 0,-4 0,-6 3,0 6,0 9,0 0,2 0,4 0,6 1,0 2,0 4,0 0,4 0,8 0,12 1,0 1,0 2,0 0,4 0,8 0,12 1,0 2,0 3,0 0,5 0,10 0,15 29,0 59,0 88,0 0,1 0,2 0,3 10,0 20,0 29,0 0,0 0,1 0,2 2,0 4,0 5,0 0,4 0,8 0,11 -2,0 -5,0 -7,0 0,3 0,5 0,7 -2,0 -4,0 -7,0 0,1 0,2 0,4 -2,0 -5,0 -7,0 0,1 0,3 0,5 -4,0 -8,0 -13,0 0,1 0,2 0,3 -4,0 -9,0 -14,0 0,2 0,4 0,5 -5,0 -11,0 -17,0 0,2 0,3 0,4 -7,0 -13,0 -19,0 0,2 0,4 0,5 -6,0 -11,0 -17,0 0,2 0,3 0,4 -7,0 -14,0 -21,0 0,8 0,15 0,23 -2,0 -4,0 -5,0 0,6 0,12 0,18 2,0 5,0 7,0 0,1 0,2 0,3 3,0 6,0 9,0 0,2 0,4 0,5 1,0 1,0 2,0 0,1 0,2 0,3 0,0 1,0 2,0 0,3 0,7 0,10 -6,0 -12,0 -18,0 0,1 0,2 0,3 -2,0 -5,0 -7,0 0,0 0,1 0,2 -2,0 -4,0 -5,0z"/>
                 </g>
             </g>
@@ -1103,13 +1103,13 @@
             <g class="symShadow" transform="translate(1.9,1.9)">
                 <polygon points="-13,-2 -5,-2 -5,-5 5,-5 5,-2 13,-2 6,5 -6,5"/>
             </g>
-            <g class="symThinBorder">
+            <g class="symThinB">
                 <polygon points="-13,-2 -5,-2 -5,-5 5,-5 5,-2 13,-2 6,5 -6,5"/>
                 <rect x="-5" width="10" height="3.3" y="-5" class="symDarkener"/>
             </g>
         </symbol>
         <symbol overflow="visible" preserveAspectRatio="xMidYMid meet"
-                id="FailedOrder" viewBox="0 0 35 35">
+                id="Failed" viewBox="0 0 35 35">
             <g transform="translate(-17.5,-17.5)">
                 <polygon stroke-width="1" class="symShadow"
                          points="0,0 12,0 17,6 22,0 35,0 22,17 32,34 19,34 15,27 9,34 -4,34 10,17"
@@ -1134,7 +1134,7 @@
                     <rect x="-4" width="22" height="3" y="5"/>
                     <circle r="6" cx="10" cy="10"/>
                 </g>
-                <g class="symThinDislodgedBorder">
+                <g class="symThinDislodgedB">
                     <rect x="-4" width="22" height="3" y="5"/>
                     <rect x="-4" width="22" height="3" y="5" class="symDarkener"/>
                     <circle r="6" cx="10" cy="10"/>
@@ -1148,7 +1148,7 @@
                 <g class="symDislodgedShadow" transform="translate(19,11)">
                     <path d="M175,195 c0,-1 0,-2 0,-2 -3,0 -5,0 -8,0 0,-1 0,-2 0,-3 -6,0 -12,0 -18,0 0,-3 0,-7 0,-10 1,0 2,0 3,0 0,-1 0,-2 0,-3 0,0 1,0 1,0 0,-1 0,-3 0,-5 3,0 6,0 9,0 0,-1 0,-2 0,-3 2,0 5,0 8,0 0,-6 0,-12 0,-18 -3,0 -5,0 -7,0 0,-8 0,-15 0,-23 -6,0 -13,0 -20,0 0,-1 0,-2 0,-4 -5,0 -11,0 -16,0 0,-1 0,-3 0,-5 -7,0 -13,0 -19,0 0,-1 0,-2 0,-4 -6,0 -12,0 -18,0 0,-1 0,-3 0,-5 -5,0 -9,0 -14,0 0,-1 0,-2 0,-3 -4,0 -8,0 -12,0 0,-2 0,-4 0,-5 -3,0 -5,0 -8,0 0,-2 0,-3 0,-4 -2,0 -4,0 -6,0 0,-2 0,-4 0,-7 -3,0 -5,0 -8,0 0,-3 0,-7 0,-11 2,0 3,0 5,0 0,-1 0,-2 0,-2 10,0 19,0 29,0 0,-1 0,-2 0,-3 29,0 58,0 87,0 0,-5 0,-10 0,-15 2,0 3,0 4,0 0,-4 0,-8 0,-12 1,0 2,0 3,0 0,-4 0,-8 0,-12 0,0 1,0 2,0 0,-2 0,-4 0,-6 3,0 6,0 9,0 0,2 0,4 0,6 1,0 2,0 4,0 0,4 0,8 0,12 1,0 1,0 2,0 0,4 0,8 0,12 1,0 2,0 3,0 0,5 0,10 0,15 29,0 59,0 88,0 0,1 0,2 0,3 10,0 20,0 29,0 0,0 0,1 0,2 2,0 4,0 5,0 0,4 0,8 0,11 -2,0 -5,0 -7,0 0,3 0,5 0,7 -2,0 -4,0 -7,0 0,1 0,2 0,4 -2,0 -5,0 -7,0 0,1 0,3 0,5 -4,0 -8,0 -13,0 0,1 0,2 0,3 -4,0 -9,0 -14,0 0,2 0,4 0,5 -5,0 -11,0 -17,0 0,2 0,3 0,4 -7,0 -13,0 -19,0 0,2 0,4 0,5 -6,0 -11,0 -17,0 0,2 0,3 0,4 -7,0 -14,0 -21,0 0,8 0,15 0,23 -2,0 -4,0 -5,0 0,6 0,12 0,18 2,0 5,0 7,0 0,1 0,2 0,3 3,0 6,0 9,0 0,2 0,4 0,5 1,0 1,0 2,0 0,1 0,2 0,3 0,0 1,0 2,0 0,3 0,7 0,10 -6,0 -12,0 -18,0 0,1 0,2 0,3 -2,0 -5,0 -7,0 0,0 0,1 0,2 -2,0 -4,0 -5,0z"/>
                 </g>
-                <g class="symThinDislodgedBorder">
+                <g class="symThinDislodgedB">
                     <path d="M175,195 c0,-1 0,-2 0,-2 -3,0 -5,0 -8,0 0,-1 0,-2 0,-3 -6,0 -12,0 -18,0 0,-3 0,-7 0,-10 1,0 2,0 3,0 0,-1 0,-2 0,-3 0,0 1,0 1,0 0,-1 0,-3 0,-5 3,0 6,0 9,0 0,-1 0,-2 0,-3 2,0 5,0 8,0 0,-6 0,-12 0,-18 -3,0 -5,0 -7,0 0,-8 0,-15 0,-23 -6,0 -13,0 -20,0 0,-1 0,-2 0,-4 -5,0 -11,0 -16,0 0,-1 0,-3 0,-5 -7,0 -13,0 -19,0 0,-1 0,-2 0,-4 -6,0 -12,0 -18,0 0,-1 0,-3 0,-5 -5,0 -9,0 -14,0 0,-1 0,-2 0,-3 -4,0 -8,0 -12,0 0,-2 0,-4 0,-5 -3,0 -5,0 -8,0 0,-2 0,-3 0,-4 -2,0 -4,0 -6,0 0,-2 0,-4 0,-7 -3,0 -5,0 -8,0 0,-3 0,-7 0,-11 2,0 3,0 5,0 0,-1 0,-2 0,-2 10,0 19,0 29,0 0,-1 0,-2 0,-3 29,0 58,0 87,0 0,-5 0,-10 0,-15 2,0 3,0 4,0 0,-4 0,-8 0,-12 1,0 2,0 3,0 0,-4 0,-8 0,-12 0,0 1,0 2,0 0,-2 0,-4 0,-6 3,0 6,0 9,0 0,2 0,4 0,6 1,0 2,0 4,0 0,4 0,8 0,12 1,0 1,0 2,0 0,4 0,8 0,12 1,0 2,0 3,0 0,5 0,10 0,15 29,0 59,0 88,0 0,1 0,2 0,3 10,0 20,0 29,0 0,0 0,1 0,2 2,0 4,0 5,0 0,4 0,8 0,11 -2,0 -5,0 -7,0 0,3 0,5 0,7 -2,0 -4,0 -7,0 0,1 0,2 0,4 -2,0 -5,0 -7,0 0,1 0,3 0,5 -4,0 -8,0 -13,0 0,1 0,2 0,3 -4,0 -9,0 -14,0 0,2 0,4 0,5 -5,0 -11,0 -17,0 0,2 0,3 0,4 -7,0 -13,0 -19,0 0,2 0,4 0,5 -6,0 -11,0 -17,0 0,2 0,3 0,4 -7,0 -14,0 -21,0 0,8 0,15 0,23 -2,0 -4,0 -5,0 0,6 0,12 0,18 2,0 5,0 7,0 0,1 0,2 0,3 3,0 6,0 9,0 0,2 0,4 0,5 1,0 1,0 2,0 0,1 0,2 0,3 0,0 1,0 2,0 0,3 0,7 0,10 -6,0 -12,0 -18,0 0,1 0,2 0,3 -2,0 -5,0 -7,0 0,0 0,1 0,2 -2,0 -4,0 -5,0z"/>
                 </g>
             </g>
@@ -1158,7 +1158,7 @@
             <g class="symDislodgedShadow" transform="translate(1.9,1.9)">
                 <polygon points="-13,-2 -5,-2 -5,-5 5,-5 5,-2 13,-2 6,5 -6,5"/>
             </g>
-            <g class="symThinDislodgedBorder">
+            <g class="symThinDislodgedB">
                 <polygon points="-13,-2 -5,-2 -5,-5 5,-5 5,-2 13,-2 6,5 -6,5"/>
                 <rect x="-5" width="10" height="3.3" y="-5" class="symDarkener"/>
             </g>
@@ -1166,7 +1166,7 @@
         <symbol overflow="visible" preserveAspectRatio="xMidYMid meet"
                 id="SupplyCenter" viewBox="0 0 10 10">
             <g transform="translate(-5,-5)">
-                <circle r="3" cx="5" class="symThinBorder" cy="5"/>
+                <circle r="3" cx="5" class="symThinB" cy="5"/>
                 <circle fill="none" r="5" cx="5" cy="5" stroke="black"
                         stroke-width="0.75"/>
             </g>
@@ -2504,10 +2504,6 @@
                     <line x1="82.7" x2="149.7" y1="211.6" y2="114"
                           class="convoyorder" stroke="darkslateblue"
                           marker-end="url(#arrow)"/>
-                    <use x="101" y="179.9" width="20"
-                         xmlns:xlink="http://www.w3.org/1999/xlink"
-                         href="#FailedOrder" xlink:type="simple"
-                         xlink:actuate="onLoad" height="20" xlink:show="embed"/>
                 </g>
             </g>
             <g id="france_2">
