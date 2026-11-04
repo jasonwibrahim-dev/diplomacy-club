@@ -31,7 +31,7 @@
         <jdipNS:SYMBOLSIZE name="DislodgedFleet" width="20" height="20"/>
         <jdipNS:SYMBOLSIZE name="DislodgedArmy" width="20" height="20"/>
         <jdipNS:SYMBOLSIZE name="DislodgedWing" width="20" height="20"/>
-        <jdipNS:SYMBOLSIZE name="FailedOrder" width="20" height="20"/>
+        <jdipNS:SYMBOLSIZE name="Order" width="20" height="20"/>
         <jdipNS:SYMBOLSIZE name="SupplyCenter" width="10" height="10"/>
         <jdipNS:SYMBOLSIZE name="BuildUnit" width="25" height="25"/>
         <jdipNS:SYMBOLSIZE name="RemoveUnit" width="25" height="25"/>
@@ -2504,10 +2504,6 @@
                     <line x1="82.7" x2="149.7" y1="211.6" y2="114"
                           class="convoyorder" stroke="darkslateblue"
                           marker-end="url(#arrow)"/>
-                    <use x="101" y="179.9" width="20"
-                         xmlns:xlink="http://www.w3.org/1999/xlink"
-                         href="#FailedOrder" xlink:type="simple"
-                         xlink:actuate="onLoad" height="20" xlink:show="embed"/>
                 </g>
             </g>
             <g id="france_2">
