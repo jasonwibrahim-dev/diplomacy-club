@@ -2707,10 +2707,6 @@
                     <line x1="101" x2="150.9" y1="201" y2="114.7"
                           class="varwidthorder" stroke="darkslateblue"
                           stroke-width="2.5" marker-end="url(#arrow)"/>
-                    <use x="126" y="157.9" width="20"
-                         xmlns:xlink="http://www.w3.org/1999/xlink"
-                         href="#FailedOrder" xlink:type="simple"
-                         xlink:actuate="onLoad" height="20" xlink:show="embed"/>
                 </g>
                 <g>
                     <line x1="30" x2="25.9" y1="98" y2="59"
