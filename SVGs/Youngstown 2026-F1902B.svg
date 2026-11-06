@@ -2733,7 +2733,7 @@
                      href="#BuildUnit" xlink:type="simple"
                      xlink:actuate="onLoad" height="25" xlink:show="embed"/>
                 <use x="167" y="194" width="20"
-                     xmlns:xlink="http://www.w3.org/1999/xlink" href="#Fleet"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" href="#Army"
                      xlink:type="simple" class="unitgermany"
                      xlink:actuate="onLoad" height="20" xlink:show="embed"/>
             </g>
